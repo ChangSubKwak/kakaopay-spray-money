@@ -20,7 +20,7 @@
     * \- 전문 통신으로 개발자들이 JSON을 많이 사용  
     * \- 관련 라이브러리 구하기 쉽게 구할 수 있음(https://mvnrepository.com)
     * \- 트러블슈팅 정보를 쉽게 찾을 수 있을 것 같아 선택하였음(http://json.com)  
-  
+</br>
 * ㆍ네이밍 룰  
     * \- Java소스코드 camel표기법을 따름
     * \- JSON의 키이름 camel표기법을 따름  
