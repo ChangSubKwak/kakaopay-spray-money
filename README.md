@@ -10,12 +10,11 @@
 5. [테스트케이스 명세](#testcase)
 6. [DB구성](#db-schema)
 
-
-
+<br><br>
 <h2 id="how-to-solve">
     1. 핵심 문제해결 전략
 </h2>
-  
+
 <h3>ㆍ모든(뿌리기/받기/조회) REST API전문 포맷은 JSON으로 하였음</h3>
 <h4>
 <pre>
@@ -23,6 +22,7 @@
   - 관련 라이브러리 구하기 쉽게 구할 수 있음(https://mvnrepository.com)
   - 트러블슈팅 정보를 쉽게 찾을 수 있을 것 같아 선택하였음(http://json.com)
 </pre>
+<br>
 </h4>
 <h3>ㆍ네이밍 룰</h3>
 <h4>
@@ -34,6 +34,7 @@
     ex) regDt(camel) --> reg_dt
 </pre>
 </h4>
+<br>
 <h3>ㆍ단위 테스트</h3>
 <h4>
 <pre>
