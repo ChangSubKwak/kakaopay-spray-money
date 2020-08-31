@@ -149,7 +149,7 @@
 // 3) curl은 설치되어 있다고 가정
 
 // 10000원짜리 5명이 가져갈 수 있는 _뿌리기_ 시도
-[PROMPT] curl --location --request POST "http://localhost:8080/token" --header "X-USER-ID:100" --header "X-ROOM-ID:ABC" --header "Content-Type:application/json" --data-raw "{\"amt\":10000,\"personNum\":5}"
+curl --location --request POST "http://localhost:8080/token" --header "X-USER-ID:100" --header "X-ROOM-ID:ABC" --header "Content-Type:application/json" --data-raw "{\"amt\":10000,\"personNum\":5}"
 
 // 위에서 뿌리기시도후 받은 응답token이 img라고 할 경우 _받기_시도 아래와 같이 차례대로 실행
 // X-USER-ID가 뿌리기한 값인 100과 다르게, X-ROOM-ID는 ABC로 통일하였음 그렇기 않으면 Bad Request받음
