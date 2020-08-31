@@ -171,8 +171,8 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 |------|------------|---------|----------|
 |medhod|   POST     |   PUT   |   GET    |
 | path |   /token   |/token/{토큰값}|/token/{토큰값}|
-|Header.X-USER-ID|{유저아이디}|{유저아이디}|{유저아이디}|
-|Header.X-ROOM-ID|{방아이디}|{방아이디}|{방아이디}|
+|Header.X-USER-ID|유저아이디|유저아이디|유저아이디|
+|Header.X-ROOM-ID|방아이디|방아이디|방아이디|
 |Header.Content-Type|application/json|없음|없음|
 |body|{<br>"amt":뿌릴금액,<br>"personNum":뿌릴인원<br>}|없음|없음|
 
@@ -182,8 +182,11 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 |200|{<br>"resCd":"00",<br>"resMsg":"정상완료",<br>"token":토큰값<br>}|{<br>"resCd":"00",<br>"resMsg":"정상완료",<br>"recvAmt":받은금액<br>}|{<br>"resCd":"00",<br>"resMsg":"정상완료",<br>"recvCmptAmt":받기완료금액,<br>"sprayAmt":뿌린금액,<br>"cmptInfo":\[{"partAmt":받은금액,"rcvId":받은유저아이디},···]}<br>}|
 |400|{<br>"resCd":예외코드,<br>"resMsg":예외메시지<br>}|{<br>"resCd":예외코드,<br>"resMsg":예외메시지<br>}|{<br>"resCd":예외코드,<br>"resMsg":예외메시지<br>}|
 |404|{<br>"timestamp":발생시간,<br>"status":404,<br>"error":"Not Found",<br>"message":"",<br>"path":입력경로값<br>}|좌동|좌동|
+|500|{<br>"timestamp":발생시간,<br>"status":500,<br>"error":"Internal Server Error",<br>"message":"",<br>"path":입력경로값<br>}|좌동|좌동|
 
 
-<h2 id="dev-env">    5. 테스트케이스 명세</h2>
-<h2 id="dev-env">    6. DB스키마</h2>
+<h2 id="testcase">    5. 테스트케이스 명세</h2>
+
+
+<h2 id="db-schema">    6. DB스키마</h2>
     
