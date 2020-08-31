@@ -173,8 +173,8 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 |Header.X-USER-ID|{유저아이디}|{유저아이디}|{유저아이디}|
 |Header.X-ROOM-ID|{방아이디}|{방아이디}|{방아이디}|
 |Header.Content-Type|application/json|없음|없음|
-|body|{"amt":뿌릴금액,<br>"personNum":뿌릴인원}|없음|없음|
-|응답(200)|{"resCd":"00","resMsg":"정상완료","token":토큰값}|없음|없음|
+|body|{<br>"amt":뿌릴금액,<br>"personNum":뿌릴인원<br>}|없음|없음|
+|응답(200)|{<br>"resCd":"00",<br>"resMsg":"정상완료",<br>"token":토큰값<br>}|{<br>"resCd":"00",<br>"resMsg":"정상완료",<br>"recvAmt":받은금액<br>}|{<br>"resCd":"00",<br>"resMsg":"정상완료",<br>"recvCmptAmt":받기완료금액,<br>"sprayAmt":뿌린금액,<br>"cmptInfo":\[{"partAmt":받은금액,"rcvId":받은유저아이디},···]}<br>}|
 |------|------------|---------|----------|
 
 <h2 id="dev-env">    5. 테스트케이스 명세</h2>
