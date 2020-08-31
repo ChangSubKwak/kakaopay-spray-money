@@ -125,11 +125,14 @@
     ├── mvnw.cmd                        # 윈도우 커맨드 환경에서 메이븐을 실행할 수 있는 파일
     ├── mysql_ddl.sql                   # DB 및 테이블 생성 스키마 DDL을 포함하는 파일
     └── pom.xml                         # 메이븐이 프로젝트를 빌드, 실행하기 위한 설정파일
-    
-<h2 id="dev-env">    3. 설치 및 실행 방법</h2>
+```
+
+<h2 id="how-to-install">    3. 설치 및 실행 방법</h2>
+
 ~~~javascript
-// 1) 윈도우키 + R, cmd + 엔터로 명령창 실행
-// 2) DB 서비스(데몬)은 구동되어 있다고 가정
+// 1) 원하는 폴더에 해당 프로젝트 파일을 다운 받아 압축풀기 또는 git clone를 이용하여 프로젝트 폴더를 가져오기
+// 2) 윈도우키 + R, cmd + 엔터로 명령창 실행
+// 3) mysqld.exe --console로 DB 서비스(데몬)를 구동 (mysql 설치는 되어 있다고 가정)
 
 // 디렉토리 이동
 [PROMPT] cd Work_Dir/kakaopay-backend-server-project
