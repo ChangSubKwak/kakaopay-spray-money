@@ -8,7 +8,7 @@
 3. [설치 및 실행 방법](#how-to-install)
 4. [API 명세](#api-spec)
 5. [테스트케이스 명세](#testcase)
-6. [DB구성](#db-schema)
+6. [DB스키마](#db-schema)
 
 <br><br>
 <h2 id="how-to-solve">
@@ -91,3 +91,44 @@
 </pre>
 </h4>
 <br>
+
+<h2 id="dev-env">    2. 개발 환경</h2>
+
+#### 기술 스택
+* JDK 1.8
+* SpringBoot 2.3.3
+* Maven
+* Lombok 1.18.12
+* JSON
+* mysql  8.0.21
+* JPA(hibernate)
+* PostMan
+* STS 4.7.1
+
+# 폴더 구성
+```bash
+├── kakaopay-backend-server-project
+│   ├── src/main/java
+│   │   ├── com.kakaopay
+│   │   │   ├── controller      # 클라이언트로 부터 요청 데이터를 처리하는 TokenController 클래스 포함
+│   │   │   ├── exception       # RuntimeException을 상속받은 클래스들과 이것들을 처리하는 핸들러 클래스 포함
+│   │   │   ├── model           # DB테이블과 일치하는 클래스 및 응답용 클래스 포함
+│   │   │   ├── repo            # JpaRepository를 상속받아 DB처리용 함수가 구현된 클래스 포함
+│   │   │   └── util            # 날짜계산, 빈데이터 JSON변환, token값 생성 함수를 보유한 클래스 포함
+│   │   ├── Application.java    # 이 프로젝트의 실행 진입점 main함수를 보유한 클래스
+│   │   └── Message.java        # 예외발생시 반환용 응답값 및 응답코드를 보유한 열거형 클래스
+│   ├── src/main/java
+│
+
+
+└── calendar-back
+    └── src
+        ├── app             # back source code를 포함(controllers, hook, models, policies등)
+        ├── bifido          # express 서버의 미들웨어 및 설정 등을 포함
+        └── config          # 서버 route, api end point, cors, mongodb 설정 값들을 포함
+
+<h2 id="dev-env">    3. 설치 및 실행 방법</h2>
+<h2 id="dev-env">    4. API 명세</h2>
+<h2 id="dev-env">    5. 테스트케이스 명세</h2>
+<h2 id="dev-env">    6. DB스키마</h2>
+    
