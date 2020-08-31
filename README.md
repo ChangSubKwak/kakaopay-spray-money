@@ -210,5 +210,6 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 ![junit_result](img/junit_result.PNG)
 
 <h2 id="db-schema">    6. DB스키마</h2>
+
 ![db_erd](img/db_erd.PNG)
     
