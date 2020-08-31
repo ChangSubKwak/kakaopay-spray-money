@@ -105,29 +105,42 @@
 * PostMan
 * STS 4.7.1
 
-# 폴더 구성
+### 폴더 구성
 ```bash
-├── kakaopay-backend-server-project
-│   ├── src/main/java
-│   │   ├── com.kakaopay
-│   │   │   ├── controller      # 클라이언트로 부터 요청 데이터를 처리하는 TokenController 클래스 포함
-│   │   │   ├── exception       # RuntimeException을 상속받은 클래스들과 이것들을 처리하는 핸들러 클래스 포함
-│   │   │   ├── model           # DB테이블과 일치하는 클래스 및 응답용 클래스 포함
-│   │   │   ├── repo            # JpaRepository를 상속받아 DB처리용 함수가 구현된 클래스 포함
-│   │   │   └── util            # 날짜계산, 빈데이터 JSON변환, token값 생성 함수를 보유한 클래스 포함
-│   │   ├── Application.java    # 이 프로젝트의 실행 진입점 main함수를 보유한 클래스
-│   │   └── Message.java        # 예외발생시 반환용 응답값 및 응답코드를 보유한 열거형 클래스
-│   ├── src/main/resources      # 
-│
-
-
-└── calendar-back
-    └── src
-        ├── app             # back source code를 포함(controllers, hook, models, policies등)
-        ├── bifido          # express 서버의 미들웨어 및 설정 등을 포함
-        └── config          # 서버 route, api end point, cors, mongodb 설정 값들을 포함
-
+└── kakaopay-backend-server-project
+    ├── src/main/java
+    │   ├── com.kakaopay
+    │   │   ├── controller              # 클라이언트로 부터 요청 데이터를 처리하는 TokenController 클래스 포함
+    │   │   ├── exception               # RuntimeException을 상속받은 클래스들과 이것들을 처리하는 핸들러 클래스 포함
+    │   │   ├── model                   # DB테이블과 일치하는 클래스 및 응답용 클래스 포함
+    │   │   ├── repo                    # JpaRepository를 상속받아 DB처리용 함수가 구현된 클래스 포함
+    │   │   └── util                    # 날짜계산, 빈데이터 JSON변환, token값 생성 함수를 보유한 클래스 포함
+    │   ├── Application.java            # 이 프로젝트의 실행 진입점 main함수를 보유한 클래스
+    │   └── Message.java                # 예외발생시 반환용 응답값 및 응답코드를 보유한 열거형 클래스
+    ├── src/main/resources
+    │   └── application.properties      # 리슨포트, DB접속정보 등을 저장하고 있는 설정파일
+    ├── src/main/test
+    │   └── com.kakaopay.project
+    │       └── ApplicationTests.java   # JUnit을 이용한 Testcase를 실행할 수 있는 함수포함 클래스
+    ├── mvnw.cmd                        # 윈도우 커맨드 환경에서 메이븐을 실행할 수 있는 파일
+    ├── mysql_ddl.sql                   # DB 및 테이블 생성 스키마 DDL을 포함하는 파일
+    └── pom.xml                         # 메이븐이 프로젝트를 빌드, 실행하기 위한 설정파일
+    
 <h2 id="dev-env">    3. 설치 및 실행 방법</h2>
+~~~javascript
+// 1) 윈도우키 + R, cmd + 엔터로 명령창 실행
+// 2) DB 서비스(데몬)은 구동되어 있다고 가정
+
+// 디렉토리 이동
+[PROMPT] cd Work_Dir/kakaopay-backend-server-project
+
+// 메이븐을 이용 스프링부트기반으로 실행
+[PROMPT] mvnw.cmd spring-boot:run
+~~~
+
+
+
+
 <h2 id="dev-env">    4. API 명세</h2>
 <h2 id="dev-env">    5. 테스트케이스 명세</h2>
 <h2 id="dev-env">    6. DB스키마</h2>
