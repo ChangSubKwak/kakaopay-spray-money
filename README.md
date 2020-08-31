@@ -148,10 +148,10 @@
 // 2) chcp 65001로 charset은 UTF-8로 변경
 // 3) curl은 설치되어 있다고 가정
 
-// 10000원짜리 5명이 가져갈 수 있는 _뿌리기_ 시도
+// 10000원짜리 5명이 가져갈 수 있는 뿌리기 시도
 curl --location --request POST "http://localhost:8080/token" --header "X-USER-ID:100" --header "X-ROOM-ID:ABC" --header "Content-Type:application/json" --data-raw "{\"amt\":10000,\"personNum\":5}"
 
-// 위에서 뿌리기시도후 받은 응답token이 img라고 할 경우 _받기_시도 아래와 같이 차례대로 실행
+// 위에서 뿌리기시도후 받은 응답token이 img라고 할 경우 받기 시도 아래와 같이 차례대로 실행
 // X-USER-ID가 뿌리기한 값인 100과 다르게, X-ROOM-ID는 ABC로 통일하였음 그렇기 않으면 Bad Request받음
 curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:101" --header "X-ROOM-ID:ABC"
 curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:102" --header "X-ROOM-ID:ABC"
@@ -159,7 +159,7 @@ curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER
 curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:104" --header "X-ROOM-ID:ABC"
 curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:105" --header "X-ROOM-ID:ABC"
 
-// 뿌리기 했을때의 X-USER-ID와 X-ROOM-ID를 동일하게 세팅후 _조회_ 시도
+// 뿌리기 했을때의 X-USER-ID와 X-ROOM-ID를 동일하게 세팅후 조회 시도
 curl --location --request GET "http://localhost:8080/token/img" --header "X-USER-ID:100" --header "X-ROOM-ID:ABC"
 ~~~
 
