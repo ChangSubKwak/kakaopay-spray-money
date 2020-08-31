@@ -164,8 +164,19 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 ~~~
 
 
+<h2 id="api-spec">    4. API 명세</h2>
 
-<h2 id="dev-env">    4. API 명세</h2>
+|      |   뿌리기   |   받기   |   조회   |
+|------|------------|---------|----------|
+|medhod|   POST     |   PUT   |   GET    |
+| path |   /token   |/token/{토큰값}|/token/{토큰값}|
+|Header.X-USER-ID|{유저아이디}|{유저아이디}|{유저아이디}|
+|Header.X-ROOM-ID|{방아이디}|{방아이디}|{방아이디}|
+|Header.Content-Type|application/json|없음|없음|
+|body|{"amt":뿌릴금액,<br>"personNum":뿌릴인원}|없음|없음|
+|응답(200)|{"resCd":"00","resMsg":"정상완료","token":토큰값}|없음|없음|
+|------|------------|---------|----------|
+
 <h2 id="dev-env">    5. 테스트케이스 명세</h2>
 <h2 id="dev-env">    6. DB스키마</h2>
     
