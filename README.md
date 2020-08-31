@@ -188,6 +188,8 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 <h2 id="testcase">    5. 테스트케이스 명세</h2>
 
 테스트코드는 resCd(응답코드)값과 일치하는 값이며, JUnit테스트시 함수명은 TC+응답코드 형태로 정하였음
+
+### 응답코드표
 |코드   |   메시지   |   클래스명   |
 |------|------------|---------|
 |00|정상완료|-|
@@ -203,6 +205,9 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 |30|다른 사람의 뿌리기 건임|OtherTokenException|
 |31|유효하지 않은 토큰임|NotValidTokenException|
 |32|조회가능한 일수인 7일이 경과하였음|CheckMoneyAfterSevenDaysException|
+
+### 테스트결과
+
 
 <h2 id="db-schema">    6. DB스키마</h2>
     
