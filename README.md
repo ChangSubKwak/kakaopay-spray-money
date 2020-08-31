@@ -117,7 +117,7 @@
 │   │   │   └── util            # 날짜계산, 빈데이터 JSON변환, token값 생성 함수를 보유한 클래스 포함
 │   │   ├── Application.java    # 이 프로젝트의 실행 진입점 main함수를 보유한 클래스
 │   │   └── Message.java        # 예외발생시 반환용 응답값 및 응답코드를 보유한 열거형 클래스
-│   ├── src/main/java
+│   ├── src/main/resources      # 
 │
 
 
