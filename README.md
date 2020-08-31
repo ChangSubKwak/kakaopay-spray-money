@@ -207,7 +207,8 @@ curl --location --request GET "http://localhost:8080/token/img" --header "X-USER
 |32|조회가능한 일수인 7일이 경과하였음|CheckMoneyAfterSevenDaysException|
 
 ### 테스트결과
-
+![junit_result](img/junit_result.PNG)
 
 <h2 id="db-schema">    6. DB스키마</h2>
+![db_erd](img/db_erd.PNG)
     
