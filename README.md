@@ -129,18 +129,39 @@
 
 <h2 id="how-to-install">    3. 설치 및 실행 방법</h2>
 
+### 서버구동
 ~~~javascript
 // 1) 원하는 폴더에 해당 프로젝트 파일을 다운 받아 압축풀기 또는 git clone를 이용하여 프로젝트 폴더를 가져오기
 // 2) 윈도우키 + R, cmd + 엔터로 명령창 실행
 // 3) mysqld.exe --console로 DB 서비스(데몬)를 구동 (mysql 설치는 되어 있다고 가정)
 
-// 디렉토리 이동
-[PROMPT] cd Work_Dir/kakaopay-backend-server-project
+// 디렉토리 이동(workDir은 사용자에 따라 다를 수 있음)
+[PROMPT] cd workDir/kakaopay-backend-server-project
 
 // 메이븐을 이용 스프링부트기반으로 실행
 [PROMPT] mvnw.cmd spring-boot:run
 ~~~
 
+### 클라이어트 REST API 실행
+~~~javascript
+// 1) 윈도우키 + R, cmd + 엔터로 별도의 명령창 실행
+// 2) chcp 65001로 charset은 UTF-8로 변경
+// 3) curl은 설치되어 있다고 가정
+
+// 10000원짜리 5명이 가져갈 수 있는 _뿌리기_ 시도
+[PROMPT] curl --location --request POST "http://localhost:8080/token" --header "X-USER-ID:100" --header "X-ROOM-ID:ABC" --header "Content-Type:application/json" --data-raw "{\"amt\":10000,\"personNum\":5}"
+
+// 위에서 뿌리기시도후 받은 응답token이 img라고 할 경우 _받기_시도 아래와 같이 차례대로 실행
+// X-USER-ID가 뿌리기한 값인 100과 다르게, X-ROOM-ID는 ABC로 통일하였음 그렇기 않으면 Bad Request받음
+curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:101" --header "X-ROOM-ID:ABC"
+curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:102" --header "X-ROOM-ID:ABC"
+curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:103" --header "X-ROOM-ID:ABC"
+curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:104" --header "X-ROOM-ID:ABC"
+curl --location --request PUT "http://localhost:8080/token/img" --header "X-USER-ID:105" --header "X-ROOM-ID:ABC"
+
+// 뿌리기 했을때의 X-USER-ID와 X-ROOM-ID를 동일하게 세팅후 _조회_ 시도
+curl --location --request GET "http://localhost:8080/token/img" --header "X-USER-ID:100" --header "X-ROOM-ID:ABC"
+~~~
 
 
 
